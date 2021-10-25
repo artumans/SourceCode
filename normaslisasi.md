@@ -15,11 +15,19 @@ CREATE TABLE detail_barang (kodefaktur VARCHAR(100), kodebarang VARCHAR(100), qt
 
 ## ALTER 
 
+constraint 
+
 ALTER TABLE `detail_barang` ADD FOREIGN KEY (`kodebarang`) REFERENCES `tabel_barang`(`kodebarang`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
 ALTER TABLE `detail_barang` ADD FOREIGN KEY (`kodefaktur`) REFERENCES `tabel_transaksi`(`kodefaktur`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
+ADD primary key
+
 ALTER TABLE `tabel_transaksi` ADD PRIMARY KEY(`kodefaktur`);
+
+Mengganti nama
+
+ALTER TABLE `tabel_barang` CHANGE `harga` `Harga` INT(10) NULL DEFAULT NULL;
 
 ## DROP 
 
