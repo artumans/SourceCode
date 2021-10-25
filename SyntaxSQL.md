@@ -1,6 +1,6 @@
 # DDL (Data Definition / Description Language)
 
-## CREATE 
+## CREATE
 <H4> membuat tabel barang </H4>
 
 CREATE TABLE tabel_barang (kodebarang VARCHAR(100), namabarang VARCHAR(100), harga INT(10) );
